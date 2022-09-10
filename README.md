@@ -11,11 +11,14 @@ Stack Overflow is a community based Q&A website and is the largest online commun
 ## Data Source
 
 ### Original Dataset 
+
 The data was sourced from Kaggle and is part of a larger StackOverflow dataset that was extracted using Google's BigQuery data warehousing tool. The original dataset includes an archive of StackOverflow content, including posts, votes, tags, and badges. The dataset is updated to mirror the StackOverflow content on the Internet Archive, and is also available through the Stack Exchange Data Explorer. 
 
 ### Data Sampled
 
 The dataset was downloaded from : https://www.kaggle.com/datasets/stackoverflow/stackoverflow
+
+`The Python Notebook was created in Google Colab and since it provides a seamless integration with Google Drive, the datasets were manually downloaded and uploaded on Google Drive.`
 
 The data that I used contains text from 10% of questions and tags from the original dataset. Since the main goal of this project is to create a model that given a question text predicts the tags, other data like votes, tags, badges have been removed. We have the data in form of two .csv files:  
 
@@ -27,13 +30,12 @@ The data that I used contains text from 10% of questions and tags from the origi
 
 ![image](https://user-images.githubusercontent.com/12669848/189503585-12abc60b-9de2-40a3-a7ab-2c2f84756400.png)
 
-*Comments:* 
-
-Google Colab notebooks were used forEven though the URL of the dataset is provided, the dataset is downloaded and taken from Google Drive
-
-
+Upon initial analysis, it becomes evitable that it would be mandatory to merge the two datasets for model prediction. Therefore, in the next step, we start with merging, cleaning and truly understanding the data.
 
 ## Data Cleaning
+
+There were a bunch of steps performed in order to clean the textual data.
+
 
 ## Exploratory Data Analysis
 
