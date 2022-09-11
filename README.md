@@ -43,12 +43,14 @@ Before, we move on to the EDA, there were a bunch of steps performed in order to
 1. In order to merge the data, I grouped the tags by the Id of the question since a question can have multiple tags. I then used the groupby function to merge the dataframes on the `Id`. The Tags were stored as a space-separated string of Tags for every question. 
 2. I separated the list into a list of individual tag strings. This makes it into a multi-label classification problem where 1 question can have multiple Tags associated with it. 
 
-### Duplicates
+### Handle Duplicates
 1. Used the pandas `duplicates()` function to find if there are any duplicates in the data.
 
 ### Handle Additional Attributes
-1. Since columns like `'CreationDate', 'ClosedDate' and ''Score` will not help us with predicting the Tags of the question, I have removed that data.
+1. Since columns like `'CreationDate', 'ClosedDate' and 'Score'` will not help us with predicting the Tags of the question, I have removed that data.
 
+### Clean Text
+1. Since the data was scraped from a website, the `Body` text that is available to us 
 ## Exploratory Data Analysis
 
 In order to understand the data, the following visualizations were analyzed
@@ -70,17 +72,19 @@ In order to understand the data, the following visualizations were analyzed
 
 
 ## Data Preparation
+### Functions for preparing data
+1. `clean_text()` : substitutes most common
 
-## Machine Learning Models
+## Machine Learning Models 
 
 ## Optimize Model parameters
 
 ## Accuracy Metrics
 
-| Classifier      | Dummy | Stochastic Gradient | Logistic Regression | MultiNomial NaiveBayes | LinearSVC | Perceptron | Passive Aggressive  
+| Classifier      | Dummy | Stochastic Gradient | Logistic Regression | MultiNomial NaiveBayes | LinearSVC | Perceptron | Passive Aggressive  |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
-| Jaccard Similarity Score      | 44.749338109 | 63.2953905195 | **65.945366206** | 62.589124358 | 65.556819719 | 56.917706850 | 58.173815832
-| Hamming Loss   | 0.2136659626      | 0.13003797740 | **0.12312183652**  |  0.1384444222 | 0.123706839 | 0.17178937647 | 0.16176346002
+| Jaccard Similarity Score      | 44.749338109 | 63.2953905195 | **65.945366206** | 62.589124358 | 65.556819719 | 56.917706850 | 58.173815832 |
+| Hamming Loss   | 0.2136659626      | 0.13003797740 | **0.12312183652**  |  0.1384444222 | 0.123706839 | 0.17178937647 | 0.16176346002 |
 
 
 
