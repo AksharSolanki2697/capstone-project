@@ -40,7 +40,7 @@ Please refer to the diagram below to understand the data. Upon initial analysis,
 Before, we move on to the EDA, there were a bunch of steps performed in order to clean the data. The initial steps were to analyze if there were any null / na values, changing dtype objects with the correct data types (mostly String) 
 
 ### Merge Data
-1. In order to merge the data, I grouped the tags by the Id of the question since a question can have multiple tags. I then use the groupby function to merge the dataframes on the `Id`. The Tags were stored as a space-separated string of Tags for every question. 
+1. In order to merge the data, I grouped the tags by the Id of the question since a question can have multiple tags. I then used the groupby function to merge the dataframes on the `Id`. The Tags were stored as a space-separated string of Tags for every question. 
 2. I separated the list into a list of individual tag strings. This makes it into a multi-label classification problem where 1 question can have multiple Tags associated with it. 
 
 ### Duplicates
