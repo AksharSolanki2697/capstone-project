@@ -50,7 +50,8 @@ Before, we move on to the EDA, there were a bunch of steps performed in order to
 1. Since columns like `'CreationDate', 'ClosedDate' and 'Score'` will not help us with predicting the Tags of the question, I have removed that data.
 
 ### Clean Text
-1. Since the data was scraped from a website, the `Body` text that is available to us 
+1. Since the data was scraped from a website, the `Body` text had HTML elements like  `<p>, <img src=''>, etc`. This type of text information is particularly harmful for the models since the tag will not be dependent on these HTML elements. Therefore, we have used a library called `BeautifulSoup()` which helps extract only the textual information from the data and ignores the HTML elements.
+
 ## Exploratory Data Analysis
 
 In order to understand the data, the following visualizations were analyzed
@@ -73,7 +74,13 @@ In order to understand the data, the following visualizations were analyzed
 
 ## Data Preparation
 ### Functions for preparing data
-1. `clean_text()` : substitutes most common
+
+The following functions were created in order to prep the data for the ML classifiers: 
+
+1. `clean_text()` : substitutes most common made errors while typing
+2. `remove_punctuation()` : Removes punctuation marks `'!"#$%&\'()*+,./:;<=>?@[\\]^_`{|}~'`
+3. `lemmatize_words()` : Lemmatizes the words using the TokTokTokenizer in the NLTK library
+4. `most_common_tags_and_keywords()` : returns a Tuple of most common tags and keywords
 
 ## Machine Learning Models 
 
