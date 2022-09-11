@@ -78,7 +78,7 @@ In order to understand the data, the following visualizations were analyzed
 The following functions were created in order to prep the data for the ML classifiers: 
 
 1. `clean_text()` : substitutes most common made errors while typing
-2. `remove_punctuation()` : Removes punctuation marks `'!"#$%&\'()*+,./:;<=>?@[\\]^_`{|}~'`
+2. `remove_punctuation()` : Removes punctuation marks `'!"#$%&\'()*+,./:;<=>?@[\\]^_{|}~'`
 3. `lemmatize_words()` : Lemmatizes the words using the TokTokTokenizer in the NLTK library
 4. `most_common_tags_and_keywords()` : returns a Tuple of most common tags and keywords
 
