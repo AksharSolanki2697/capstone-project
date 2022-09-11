@@ -43,17 +43,31 @@ Before, we move on to the EDA, there were a bunch of steps performed in order to
 1. In order to merge the data, I grouped the tags by the Id of the question since a question can have multiple tags. I then use the groupby function to merge the dataframes on the `Id`. The Tags were stored as a space-separated string of Tags for every question. 
 2. I separated the list into a list of individual tag strings. This makes it into a multi-label classification problem where 1 question can have multiple Tags associated with it. 
 
-*For example: *
-
-
-
 ### Duplicates
 1. Used the pandas `duplicates()` function to find if there are any duplicates in the data.
 
-### Drop Additional attributes
-1. 
+### Handle Additional Attributes
+1. Since columns like `'CreationDate', 'ClosedDate' and ''Score` will not help us with predicting the Tags of the question, I have removed that data.
 
 ## Exploratory Data Analysis
+
+In order to understand the data, the following visualizations were analyzed
+1. Distribution of Answers per question
+
+![image](https://user-images.githubusercontent.com/12669848/189508887-73902250-ac7f-46b7-b7e6-63e725d15c72.png)
+
+2. 10 Most common tags in the questions
+
+![image](https://user-images.githubusercontent.com/12669848/189508901-3243e1c4-3a03-4831-8654-2538792f0a9f.png)
+
+3. Word Cloud to highlight the most frequent tags in the data
+
+![image](https://user-images.githubusercontent.com/12669848/189508915-e95277b1-f196-41df-b843-1c2a9f8389f7.png)
+
+4. Occurence of 370 most common tags in the data (3700 tags available: only viewing ~10%)
+
+![image](https://user-images.githubusercontent.com/12669848/189509045-a3de2fa5-fa8d-48bb-b158-96f49006c31c.png)
+
 
 ## Data Preparation
 
@@ -62,6 +76,13 @@ Before, we move on to the EDA, there were a bunch of steps performed in order to
 ## Optimize Model parameters
 
 ## Accuracy Metrics
+
+| Classifier      | Dummy | Stochastic Gradient | Logistic Regression | MultiNomial NaiveBayes | LinearSVC | Perceptron | Passive Aggressive  
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
+| Jaccard Similarity Score      | 44.74933810930001 | 63.295390519528084 | **65.94536620607599** | 62.58912435834559 | 65.55681971907912 | 56.91770685085844 | 58.17381583286798
+| Hamming Loss   | 0.2136659626687613      | 0.13003797740859996 | **0.12312183652896636**  |  0.1384444222567716 | 0.123706839217471 | 0.17178937647589948 | 0.16176346002089106
+
+
 
 
 
