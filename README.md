@@ -30,12 +30,28 @@ The data that I used contains text from 10% of questions and tags from the origi
 
 ![image](https://user-images.githubusercontent.com/12669848/189503585-12abc60b-9de2-40a3-a7ab-2c2f84756400.png)
 
-Upon initial analysis, it becomes evitable that it would be mandatory to merge the two datasets for model prediction. Therefore, in the next step, we start with merging, cleaning and truly understanding the data.
+Please refer to the diagram below to understand the data. Upon initial analysis, it becomes evitable that it would be mandatory to merge the two datasets for model prediction. Therefore, in the next step, we start with merging, cleaning and truly understanding the data. 
+
+![image](https://user-images.githubusercontent.com/12669848/189506215-fc5d762c-37d3-4045-aa10-37ec3e1f0aff.png)
+
 
 ## Data Cleaning
 
-There were a bunch of steps performed in order to clean the textual data.
+Before, we move on to the EDA, there were a bunch of steps performed in order to clean the data. The first steps were to analyze if there were any null / na values, changing dtype objects with the correct data types (mostly String) 
 
+### Merge Data
+1. In order to merge the data, I grouped the tags by the Id of the question since a question can have multiple tags. I then use the groupby function to merge the dataframes on the `Id`. The Tags were stored as a space-separated string of Tags for every question. 
+2. I separated the list into a list of individual tag strings. This makes it into a multi-label classification problem where 1 question can have multiple Tags associated with it. 
+
+*For example: *
+
+
+
+### Duplicates
+1. Used the pandas `duplicates()` function to find if there are any duplicates in the data.
+
+### Drop Additional attributes
+1. 
 
 ## Exploratory Data Analysis
 
