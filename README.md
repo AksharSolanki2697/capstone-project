@@ -82,13 +82,52 @@ The following functions were created in order to prep the data for the ML classi
 3. `lemmatize_words()` : Lemmatizes the words using the TokTokTokenizer in the NLTK library
 4. `most_common_tags_and_keywords()` : returns a Tuple of most common tags and keywords
 
-## Machine Learning Models 
+## Machine Learning Models (In Progress)
+
+The following Machine Learning models were used to 
+
+### DummyClassifier (Baseline Prediction)
+
+The Dummy Classifier gives a measure of "baseline" performance that is the success rate one should expect to achieve even if simply guessing. It makes a prediction without finding any patterns in the data. In our use case, the dummy classifier predicts the tags based on most common tags in the training data set. Since our data is not balanced, we have some tags that occur more frequently than others. That is the reason why we have a similarity score of only around 44.7%. 
+
+### Stochastic Gradient Classifier
 
 
+### Logistic Regression Classifier
 
-## Optimize Model parameters
+### Multinomial Naive Bayes Classifier
+
+### Linear Support Vector Classifier
+
+
+### Perceptron 
+
+### Passive Aggressive Classifier
+
+
+## Optimize Model parameters (In Progress)
 
 ## Accuracy Metrics
+
+Following are the two metrics that are used in 
+### 1. Jaccard Similarity Score 
+
+#### Average Jaccard Similarity  
+**Range** - 0% to 100%
+
+The Jaccard Similarity Index is a measure of the similarity between two sets of data. The closer to 100, the more similar are the two sets of data. In our case, it looks for similarities in the predicted tags with the actual tags in the test data. The Jaccard similarity index is calculated as follows:
+
+![image](images/jaccard-formula.jpg)
+
+
+#### Hamming Loss
+**Range** - 0 to 1 
+
+The Hamming loss is the fraction of labels that are incorrectly predicted. Therefore, the lower the Hamming loss, the better prediction was achieved. The hamming loss is calculated as follows: 
+
+![image](images/hamming-loss.png)
+
+
 
 | Classifier      | Dummy | Stochastic Gradient | Logistic Regression | MultiNomial NaiveBayes | LinearSVC | Perceptron | Passive Aggressive  |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
