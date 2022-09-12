@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/12669848/189498908-09206c0c-5e48-4164-8f4c-edccb593cd19.png)
+![image](images/stackoverflow_logo.png)
 
 
 
@@ -24,15 +24,15 @@ The data that I used contains text from 10% of questions and tags from the origi
 
 1. **Questions.csv** : contains the title, body, creation date, closed date (if applicable), score, and owner ID for all non-deleted Stack Overflow questions whose Id is a multiple of 10.
 
-![image](https://user-images.githubusercontent.com/12669848/189503565-cc036bde-52fc-4cf5-a501-25d69ffccc2e.png)
+![image](images/questions_dataframe.png)
 
 2. **Tags.csv** : contains the tags on each of these questions
 
-![image](https://user-images.githubusercontent.com/12669848/189503585-12abc60b-9de2-40a3-a7ab-2c2f84756400.png)
+![image](images/tags_dataframe.png)
 
 Please refer to the diagram below to understand the data. Upon initial analysis, it becomes evitable that it would be mandatory to merge the two datasets for model prediction. Therefore, in the next step, we start with merging, cleaning and truly understanding the data. 
 
-![image](https://user-images.githubusercontent.com/12669848/189506215-fc5d762c-37d3-4045-aa10-37ec3e1f0aff.png)
+![image](images/data_explanation.png)
 
 
 ## Data Cleaning
@@ -57,19 +57,19 @@ Before, we move on to the EDA, there were a bunch of steps performed in order to
 In order to understand the data, the following visualizations were analyzed
 1. Distribution of Answers per question
 
-![image](https://user-images.githubusercontent.com/12669848/189508887-73902250-ac7f-46b7-b7e6-63e725d15c72.png)
+![image](images/viz1.png)
 
 2. 10 Most common tags in the questions
 
-![image](https://user-images.githubusercontent.com/12669848/189508901-3243e1c4-3a03-4831-8654-2538792f0a9f.png)
+![image](images/viz2.png)
 
 3. Word Cloud to highlight the most frequent tags in the data
 
-![image](https://user-images.githubusercontent.com/12669848/189508915-e95277b1-f196-41df-b843-1c2a9f8389f7.png)
+![image](images/viz3.png)
 
 4. Occurence of 370 most common tags in the data (3700 tags available: only viewing ~10%)
 
-![image](https://user-images.githubusercontent.com/12669848/189509045-a3de2fa5-fa8d-48bb-b158-96f49006c31c.png)
+![image](images/viz4.png)
 
 
 ## Data Preparation
