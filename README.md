@@ -92,6 +92,15 @@ The Dummy Classifier gives a measure of "baseline" performance that is the succe
 
 ### Stochastic Gradient Classifier
 
+SGD is an Stochastic Gradient Descent-based general optimization method. Stochastic Gradient Descent (SGD) is a simple yet very efficient approach to discriminative learning of linear classifiers under convex loss functions. Even though SGD has been around in the machine learning community for a long time, it has received a considerable amount of attention just recently in the context of large-scale  deep-learning.  optimizer which can optimize many different convex-optimization problems (actually: this is more or less the same method used in all those Deep-Learning approaches; so people use it in the non-convex setting too; throwing away theoretical-guarantees).
+
+Following are the features of SGD classifiers:
+
+    1. Scale better for huge-data in general
+    
+    2. Need hyper-parameter tuning
+    
+    3. Solve only a subset of the tasks approachable by the the above (no kernel-methods!)
 
 ### Logistic Regression Classifier
 
