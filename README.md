@@ -71,6 +71,10 @@ In order to understand the data, the following visualizations were analyzed
 
 ![image](images/viz4.png)
 
+5. Word Cloud to highlight most frequent words in the title of the question
+
+![image](images/viz5.png)
+
 
 ## Data Preparation
 ### Functions for preparing data
@@ -101,15 +105,57 @@ Following are the features of SGD classifiers:
     2. Need hyper-parameter tuning
     
     3. Solve only a subset of the tasks approachable by the the above (no kernel-methods!)
+    
+In our use case, the SGD classifier gave us an average jaccard similarity value of 63.295%
 
 ### Logistic Regression Classifier
 
+Logistic Regression is a statistical method for analyzing a dataset in which there are one or more independent variables that determine an outcome. The intention behind using logistic regression is to find the best fitting model to describe the relationship between the dependent and the independent variable. Since logistic regression works for binary target variables, in the multiclass case, the training algorithm uses the one-vs-rest (OvR) scheme which we have used. We use the Multinomial Logistic Regression where The target variable has three or more nominal categories such as predicting the type of wine.
+
+Because of its efficient and straightforward nature, it doesn't require high computation power, is easy to implement, easily interpretable, and used widely by data analysts and scientists. Also, it doesn't require scaling of features. Logistic regression provides a probability score for observations.
+
 ### Multinomial Naive Bayes Classifier
+
+The Multinomial Naive Bayes algorithm is a Bayesian learning approach popular in Natural Language Processing (NLP). The program guesses the tag of a text, such as an email or a newspaper story, using the Bayes theorem. It calculates each tag's likelihood for a given sample and outputs the tag with the greatest chance.  
+
+The Naive Bayes method is a strong tool for analyzing text input and solving problems with numerous classes. Because the Naive Bayes theorem is based on the Bayes theorem, it is necessary to first comprehend the Bayes theorem notion. The Bayes theorem, which was developed by Thomas Bayes, estimates the likelihood of occurrence based on prior knowledge of the event's conditions. When predictor B itself is available, we calculate the likelihood of class A.
+
+It is simple to implement because all you have to do is calculate probability. This approach works with both continuous and discrete data. It's straightforward and can be used to forecast real-time applications. It's very scalable and can handle enormous datasets with ease. This algorithm's prediction accuracy is lower than that of other probability algorithms. The Naive Bayes technique can only be used to classify textual input and cannot be used to estimate numerical values.
 
 ### Linear Support Vector Classifier
 
+Linear Support Vector Machines (linear-svc) have been used successfully in many Natural Language Processing (NLP) tasks. Support Vector Machines (SVM) is a supervised machine learning algorithm, which has achieved state-of-the-art performance on many learning tasks. In particular, SVM is a popular learning algorithm for Natural Language Processing (NLP) tasks such as 
+
+        1. POS (Partof-speech) tagging 
+        2. word sense disambiguation
+        3. NP (noun phrase) chunking
+        4. information extraction
+        5. relation extraction
+        6. semantic role labeling 
+        7. dependency analysis.
+ 
+Almost all these applications adopt the same steps: first they transform the problem into a multi-class classification task and then apply svc; then convert the multiclass problem into several binary classification problems; then an SVM classifier is trained for each binary classification; and finally, the classifiers’ results are combined to obtain the solution to the NLP problem
 
 ### Perceptron 
+
+The Perceptron algorithm is a two-class (binary) classification machine learning algorithm. In our case, we use the OneVRest classifier to turn it into a multi-class classifier. 
+
+It is a type of neural network model, perhaps the simplest type of neural network model.
+
+It consists of a single node or neuron that takes a row of data as input and predicts a class label. This is achieved by calculating the weighted sum of the inputs and a bias (set to 1). The weighted sum of the input of the model is called the activation.
+
+Activation = Weights * Inputs + Bias
+If the activation is above 0.0, the model will output 1.0; otherwise, it will output 0.0.
+
+Predict 1: If Activation > 0.0
+Predict 0: If Activation <= 0.0
+Given that the inputs are multiplied by model coefficients, like linear regression and logistic regression, it is good practice to normalize or standardize data prior to using the model.
+
+The Perceptron is a linear classification algorithm. This means that it learns a decision boundary that separates two classes using a line (called a hyperplane) in the feature space. As such, it is appropriate for those problems where the classes can be separated well by a line or linear model, referred to as linearly separable.
+
+The coefficients of the model are referred to as input weights and are trained using the stochastic gradient descent optimization algorithm.
+
+Model weights are updated with a small proportion of the error each batch, and the proportion is controlled by a hyperparameter called the learning rate, typically set to a small value. This is to ensure learning does not occur too quickly, resulting in a possibly lower skill model, referred to as premature convergence of the optimization (search) procedure for the model weights.
 
 ### Passive Aggressive Classifier
 
@@ -133,6 +179,7 @@ The Jaccard Similarity Index is a measure of the similarity between two sets of 
 **Range** - 0 to 1 
 
 The Hamming loss is the fraction of labels that are incorrectly predicted. Therefore, the lower the Hamming loss, the better prediction was achieved. The hamming loss is calculated as follows: 
+
 
 ![image](images/hamming-loss.png)
 
