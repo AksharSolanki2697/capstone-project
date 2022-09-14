@@ -71,6 +71,10 @@ In order to understand the data, the following visualizations were analyzed
 
 ![image](images/viz4.png)
 
+5. Word Cloud to highlight most frequent words in the title of the question
+
+![image](images/viz5.png)
+
 
 ## Data Preparation
 ### Functions for preparing data
