@@ -159,8 +159,21 @@ Model weights are updated with a small proportion of the error each batch, and t
 
 ### Passive Aggressive Classifier
 
+The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications.
+How Passive-Aggressive Algorithms Work:
+Passive-Aggressive algorithms are called so because:
 
-## Optimize Model parameters (In Progress)
+1.	Passive: If the prediction is correct, keep the model and do not make any changes. i.e., the data in the example is not enough to cause any changes in the model. 
+2.	Aggressive: If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it.
+However, in our case, even though the sequential data was used, we did not get a good result on our training set. We got around 58% similarity index. 
+
+
+## Optimize Model parameters 
+
+I used GridSearch CV to optimize the parameters of our machine learning algorithms. However, since the size of our data is huge, I was not able to run the GridSearch optimization for all the models. 
+1.	GridSearchCV on LinearSVC model (similarity improved to ~69% )
+2.	GridSearchCV on SGD Classifier model (similarity improved to ~68%)	
+
 
 ## Accuracy Metrics
 
