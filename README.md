@@ -16,7 +16,7 @@ The data was sourced from Kaggle and is part of a larger StackOverflow dataset t
 
 ### Data Sampled
 
-The dataset was downloaded from : https://www.kaggle.com/datasets/stackoverflow/stackoverflow
+The dataset was downloaded from : https://www.kaggle.com/datasets/stackoverflow/stacksample
 
 `The Python Notebook was created in Google Colab and since it provides a seamless integration with Google Drive, the datasets were manually downloaded and uploaded on Google Drive.`
 
